@@ -73,6 +73,13 @@ namespace CleanNearbyRockRubble
 			// If mining is enabled and it is lower priority than cleaning
 			if (pMining != 0 && pMining > pCleaning)
 			{
+				IntVec3 dist = pawn.Position - filth.Position;
+				// If the distance between the filth position and the pawn's current position is more than 25 tiles
+				// don't prioritise.
+				if (dist.LengthManhattan > 25)
+				{
+					return false;
+				}
 				// This will become a job if THREE TIMES the usual number of ticks have passed.
 				return Find.AreaHome[filth.Position] && pawn.CanReserveAndReach(t, PathEndMode.ClosestTouch, pawn.NormalMaxDanger(), 1) && filth.TicksSinceThickened >= 3 * this.MinTicksSinceThickened;
 			}

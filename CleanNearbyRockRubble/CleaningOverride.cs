@@ -66,12 +66,19 @@ namespace CleanNearbyRockRubble
 					return Find.AreaHome[filth.Position] && pawn.CanReserveAndReach(t, PathEndMode.ClosestTouch, pawn.NormalMaxDanger(), 1) && filth.TicksSinceThickened >= this.MinTicksSinceThickened;
 
 				}
-				// Otherwise, if 9600 ticks have passed, this filth can be cleaned.
-				return Find.AreaHome[filth.Position] && pawn.CanReserveAndReach(t, PathEndMode.ClosestTouch, pawn.NormalMaxDanger(), 1) && filth.TicksSinceThickened >= 4 * this.MinTicksSinceThickened;
-			}
+				IntVec3 dist = pawn.Position - filth.Position;
+				// If the distance between the filth position and the pawn's current position is more than 10 tiles
+				// clean it if it's 9600 ticks old.
+				if (dist.LengthManhattan < 10)
+				{
+					return Find.AreaHome[filth.Position] && pawn.CanReserveAndReach(t, PathEndMode.ClosestTouch, pawn.NormalMaxDanger(), 1) && filth.TicksSinceThickened >= 4 * this.MinTicksSinceThickened;
+				}
 
-			// We've done rock rubble with the higher-priority WorkGivers.
-			return false;
+				// Otherwise, if a day has passed, this filth can be cleaned.
+				return Find.AreaHome[filth.Position] && pawn.CanReserveAndReach(t, PathEndMode.ClosestTouch, pawn.NormalMaxDanger(), 1) && filth.TicksSinceThickened >= 100 * this.MinTicksSinceThickened;
+			}
+			// Rubble that has been neglected for more than a day will be cleaned by any cleaner.
+			return Find.AreaHome[filth.Position] && pawn.CanReserveAndReach(t, PathEndMode.ClosestTouch, pawn.NormalMaxDanger(), 1) && filth.TicksSinceThickened >=  100 * this.MinTicksSinceThickened;
 
 		}
 
