@@ -1,0 +1,10 @@
+C:\Users\tokra\Documents\Projects\MarvsLaptopMods\CleanNearbyRockRubble\bin\Debug\CleanNearbyRockRubble.dll
+C:\Users\tokra\Documents\Projects\MarvsLaptopMods\CleanNearbyRockRubble\bin\Debug\CleanNearbyRockRubble.pdb
+C:\Users\tokra\Documents\Projects\MarvsLaptopMods\CleanNearbyRockRubble\bin\Debug\Assembly-CSharp.dll
+C:\Users\tokra\Documents\Projects\MarvsLaptopMods\CleanNearbyRockRubble\bin\Debug\UnityEngine.dll
+C:\Users\tokra\Documents\Projects\MarvsLaptopMods\CleanNearbyRockRubble\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\tokra\Documents\Projects\MarvsLaptopMods\CleanNearbyRockRubble\bin\Debug\NAudio.dll
+C:\Users\tokra\Documents\Projects\MarvsLaptopMods\CleanNearbyRockRubble\bin\Debug\NVorbis.dll
+C:\Users\tokra\Documents\Projects\MarvsLaptopMods\CleanNearbyRockRubble\obj\Debug\CleanNearbyRockRubble.csprojResolveAssemblyReference.cache
+C:\Users\tokra\Documents\Projects\MarvsLaptopMods\CleanNearbyRockRubble\obj\Debug\CleanNearbyRockRubble.dll
+C:\Users\tokra\Documents\Projects\MarvsLaptopMods\CleanNearbyRockRubble\obj\Debug\CleanNearbyRockRubble.pdb
